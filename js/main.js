@@ -2,10 +2,20 @@ fetch(API_BASE_URL)
   .then(res => res.json())
   .then(data => {
     const list = document.getElementById("experienceList");
+
     data.forEach(item => {
       const li = document.createElement("li");
-      li.textContent = `${item.companyname} – ${item.jobtitle} (${item.startdate} till ${item.enddate})`;
+
+      const start = formatDate(item.startdate);
+      const end = formatDate(item.enddate);
+
+      li.textContent = `${item.companyname} – ${item.jobtitle} (${start} till ${end})`;
       list.appendChild(li);
     });
   })
   .catch(err => console.error("Fel vid hämtning:", err));
+
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  return date.toISOString().split("T")[0]; 
+}

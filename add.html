@@ -6,8 +6,38 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-   
+  <nav>
+    <ul>
+      <li><a href="index.html">Startsida</a></li>
+      <li><a href="add.html">Lägg till</a></li>
+      <li><a href="about.html">Om</a></li>
+    </ul>
+  </nav>
   <h1>Lägg till arbetserfarenhet</h1>
-  
+  <form id="workForm">
+    <label for="companyname">Företagsnamn:</label>
+    <input type="text" id="companyname" name="companyname" required />
+
+    <label for="jobtitle">Jobbtitel:</label>
+    <input type="text" id="jobtitle" name="jobtitle" required />
+
+    <label for="location">Plats:</label>
+    <input type="text" id="location" name="location" required />
+
+    <label for="startdate">Startdatum:</label>
+    <input type="date" id="startdate" name="startdate" required />
+
+    <label for="enddate">Slutdatum:</label>
+    <input type="date" id="enddate" name="enddate" required />
+
+    <label for="description">Beskrivning:</label>
+    <textarea id="description" name="description" required></textarea>
+
+    <button type="submit">Lägg till</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script src="js/add.js"></script>
 </body>
 </html>
