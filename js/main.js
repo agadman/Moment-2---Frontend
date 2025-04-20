@@ -9,7 +9,7 @@ fetch(API_BASE_URL)
       const start = formatDate(item.startdate);
       const end = formatDate(item.enddate);
 
-      li.textContent = `${item.companyname} – ${item.jobtitle} (${start} till ${end})`;
+      li.innerHTML = `${item.companyname} – ${item.jobtitle} (${start} till ${end})<br>${item.description}`;
       list.appendChild(li);
     });
   })
