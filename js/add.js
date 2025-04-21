@@ -18,7 +18,8 @@ document.getElementById("workForm").addEventListener("submit", async (e) => {
       });
   
       if (!response.ok) {
-        throw new Error("Något gick fel vid sparandet!");
+        const errorText = await response.text();
+        throw new Error("Något gick fel vid sparandet!" + errorText);
       }
   
       document.getElementById("message").textContent = "Erfarenhet tillagd!";
