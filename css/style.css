@@ -118,3 +118,46 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     text-align: left;
   }
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  nav li {
+    padding: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  form {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  form input,
+  form textarea,
+  button {
+    font-size: 1rem;
+  }
+
+  #experienceList {
+    margin: 1rem;
+    padding: 0 1rem;
+  }
+
+  #experienceList li {
+    padding: 1rem;
+  }
+}
