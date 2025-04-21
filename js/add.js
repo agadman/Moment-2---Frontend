@@ -11,15 +11,14 @@ document.getElementById("workForm").addEventListener("submit", async (e) => {
     };
   
     try {
-      const response = await fetch(`${API_BASE_URL}/api/workexperience`, {
+      const response = await fetch(API_BASE_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
   
       if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error("Något gick fel vid sparandet!" + errorText);
+        throw new Error("Något gick fel vid sparandet!");
       }
   
       document.getElementById("message").textContent = "Erfarenhet tillagd!";
