@@ -2,6 +2,8 @@
 
 Detta är en webbplats där jag använder fetch API för att hämta och skicka data till en webbtjänst som hanterar arbetserfarenheter.
 
+Publicerad länk: https://moment-2-frontend.onrender.com
+
 ## Om webbplatsen
 
 Webbplatsen är byggd med HTML, CSS och JavaScript. Den är fristående från webbtjänsten och visar information om tidigare arbetsplatser. Man kan också lägga till nya poster via ett formulär. 
